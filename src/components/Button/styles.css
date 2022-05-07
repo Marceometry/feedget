@@ -1,0 +1,11 @@
+button.button {
+  @apply py-2 px-6 rounded-md border-transparent flex-1 flex justify-center items-center text-sm transition-colors;
+}
+
+button.primary {
+  @apply bg-brand-500 hover:bg-brand-300 disabled:hover:bg-brand-500;
+}
+
+button.secondary {
+  @apply bg-zinc-800 hover:bg-zinc-700 disabled:hover:bg-zinc-800;
+}
