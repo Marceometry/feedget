@@ -2,7 +2,7 @@
   "name": "feedget",
   "version": "1.0.0",
   "description": "FeedGet: Feedback Widget component",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "files": [
     "dist/**/*"
   ],
