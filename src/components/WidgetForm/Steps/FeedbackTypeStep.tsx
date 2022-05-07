@@ -1,3 +1,4 @@
+import React from 'react'
 import { FeedbackType, feedbackTypes } from '@/constants'
 import { CloseButton } from '@/components'
 

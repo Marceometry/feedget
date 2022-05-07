@@ -1,3 +1,4 @@
+import React from 'react'
 import { CircleNotch } from 'phosphor-react'
 
 export const Loading = () => {

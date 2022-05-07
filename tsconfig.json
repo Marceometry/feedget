@@ -7,7 +7,12 @@
     "moduleResolution": "node",
     "jsx": "react",
     "allowJs": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": { "@/*": ["*"] },
+    "plugins": [{ "transform": "typescript-transform-paths" }]
   },
   "include": ["src"],
   "exclude": ["node_modules"]

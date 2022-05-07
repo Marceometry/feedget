@@ -1,3 +1,4 @@
+import React from 'react'
 import { Button, CloseButton } from '@/components'
 import { successImage } from '@/assets'
 

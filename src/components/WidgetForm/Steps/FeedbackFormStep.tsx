@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { ArrowLeft } from 'phosphor-react'
 import { api } from '@/services'
 import { FeedbackType, feedbackTypes } from '@/constants'

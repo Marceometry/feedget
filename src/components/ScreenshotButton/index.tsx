@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import html2canvas from 'html2canvas'
 import { Camera, Trash } from 'phosphor-react'
 import { Loading } from '@/components'
