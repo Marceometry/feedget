@@ -1,3 +1,2 @@
-import { Widget } from './components'
-
-export { Widget as FeedbackWidget }
+import './@types/svg'
+export { Widget as FeedbackWidget } from './components'
