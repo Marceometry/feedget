@@ -12,33 +12,36 @@
     "widget"
   ],
   "repository": {
-    "url": "https://github.com/Marceometry/feedget"
+    "url": "https://github.com/Marceometry/feedget.git",
+    "type": "git"
   },
   "license": "ISC",
   "author": "Marcelino Teixeira",
   "scripts": {
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.css src/**/*.svg dist/",
-    "build": "npm run clean && npx ttsc --p ./tsconfig.json && npm run copy-files"
+    "build:css": "postcss src/styles/global.css -o dist/styles/global.css",
+    "build": "npm run clean && npx ttsc --p ./tsconfig.json && npm run copy-files && npm run build:css"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.0",
+    "autoprefixer": "^10.4.7",
     "axios": "^0.27.2",
     "html2canvas": "^1.4.1",
     "phosphor-react": "^1.4.1",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "tailwind-scrollbar": "^1.3.1",
+    "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "autoprefixer": "^10.4.7",
     "copyfiles": "^2.4.1",
-    "postcss": "^8.4.13",
     "rimraf": "^3.0.2",
-    "tailwind-scrollbar": "^1.3.1",
-    "tailwindcss": "^3.0.24",
     "ttypescript": "^1.5.13",
     "typescript": "^4.6.4",
     "typescript-transform-paths": "^3.3.1"

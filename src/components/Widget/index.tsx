@@ -5,7 +5,7 @@ import { WidgetForm } from '..'
 
 export const Widget = () => {
   return (
-    <Popover className='absolute bottom-4 right-4 sm:bottom-8 sm:right-8 flex flex-col items-end'>
+    <Popover className='absolute bottom-4 right-4 sm:bottom-8 sm:right-8 flex flex-col items-end text-zinc-100'>
       <Popover.Panel>
         <WidgetForm />
       </Popover.Panel>

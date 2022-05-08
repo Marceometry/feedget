@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-[#09090A] text-zinc-100;
+.focus {
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500;
+}
+
+.disabled {
+  @apply disabled:opacity-50 disabled:cursor-not-allowed;
 }
