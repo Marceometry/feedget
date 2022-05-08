@@ -5,12 +5,12 @@ import { WidgetForm } from '..'
 
 export const Widget = () => {
   return (
-    <Popover className='absolute bottom-4 right-4 sm:bottom-8 sm:right-8 flex flex-col items-end text-zinc-100'>
+    <Popover className='absolute bottom-4 right-4 sm:bottom-8 sm:right-8 flex flex-col items-end text-zinc-800 dark:text-zinc-100'>
       <Popover.Panel>
         <WidgetForm />
       </Popover.Panel>
 
-      <Popover.Button className='!bg-brand-500 rounded-full px-3 h-12 text-white flex items-center group'>
+      <Popover.Button className='primary rounded-full px-3 h-12 flex items-center group transition-colors'>
         <ChatTeardropDots className='w-6 h-6' />
 
         <span className='max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-linear'>

@@ -30,7 +30,7 @@ export const ScreenshotButton = ({
     return (
       <button
         type='button'
-        className='p-1 w-10 h-10 rounded-md border-transparent flex justify-end items-end text-zinc-400 hover:text-zinc-100 transition-colors disabled disabled:hover:text-zinc-400'
+        className='p-1 w-10 h-10 rounded-md border-transparent flex justify-end items-end text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors disabled disabled:hover:text-zinc-500 dark:disabled:hover:text-zinc-400'
         style={{ backgroundImage: `url(${screenshot})` }}
         onClick={() => onScreenshot(null)}
         disabled={disabled}
@@ -43,14 +43,14 @@ export const ScreenshotButton = ({
   return (
     <button
       type='button'
-      className='p-2 bg-zinc-800 rounded-md border-transparent hover:bg-zinc-700 transition-colors focus disabled disabled:hover:bg-zinc-800'
+      className='p-2 bg-zinc-100 dark:bg-zinc-800 rounded-md border-transparent hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors focus disabled disabled:hover:bg-zinc-100 dark:disabled:hover:bg-zinc-800'
       onClick={handleScreenshot}
       disabled={disabled}
     >
       {isTakingScreenshot ? (
         <Loading />
       ) : (
-        <Camera className='w-6 h-6 text-zinc-100' />
+        <Camera className='w-6 h-6 text-zinc-800 dark:text-zinc-100' />
       )}
     </button>
   )
