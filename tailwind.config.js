@@ -4,8 +4,11 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          300: '#996DFF',
-          500: '#8257E6',
+          300: 'var(--feedget-brand-300)',
+          500: 'var(--feedget-brand-500)',
+        },
+        'on-brand': {
+          100: 'var(--feedget-text-on-brand)',
         },
       },
       borderRadius: {

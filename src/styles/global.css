@@ -15,7 +15,7 @@
 }
 
 .primary {
-  @apply text-white !bg-brand-500 hover:!bg-brand-300 disabled:hover:!bg-brand-500;
+  @apply text-on-brand-100 !bg-brand-500 hover:!bg-brand-300 disabled:hover:!bg-brand-500;
 }
 
 .secondary {
