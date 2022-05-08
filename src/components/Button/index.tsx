@@ -1,6 +1,5 @@
 import React from 'react'
 import { Loading } from '@/components'
-import './styles.css'
 
 type Props = React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
