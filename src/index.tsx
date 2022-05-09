@@ -6,7 +6,7 @@ import './styles/global.css'
 import './@types/svg'
 
 export type FeedbackWidgetProps = {
-  userId: string
+  clientId: string
   theme?: Theme
   primaryColor?: string
   primaryColorHover?: string
@@ -14,7 +14,7 @@ export type FeedbackWidgetProps = {
 }
 
 export const FeedbackWidget = ({
-  userId,
+  clientId,
   theme = 'system',
   primaryColor,
   primaryColorHover,
@@ -27,5 +27,5 @@ export const FeedbackWidget = ({
     text: primaryColorText,
   })
 
-  return <Widget userId={userId} />
+  return <Widget clientId={clientId} />
 }

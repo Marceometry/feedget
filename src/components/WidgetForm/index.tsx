@@ -7,10 +7,10 @@ import {
 } from './Steps'
 
 type Props = {
-  userId: string
+  clientId: string
 }
 
-export const WidgetForm = ({ userId }: Props) => {
+export const WidgetForm = ({ clientId }: Props) => {
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null)
   const [feedbackSent, setFeedbackSent] = useState(false)
 
@@ -27,7 +27,7 @@ export const WidgetForm = ({ userId }: Props) => {
         <FeedbackTypeStep handleChangeFeedback={setFeedbackType} />
       ) : (
         <FeedbackFormStep
-          userId={userId}
+          clientId={clientId}
           feedbackType={feedbackType}
           handleRestartFeedback={handleRestartFeedback}
           onFormSubmit={() => setFeedbackSent(true)}

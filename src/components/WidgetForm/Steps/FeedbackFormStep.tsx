@@ -8,14 +8,14 @@ type Props = {
   feedbackType: FeedbackType
   handleRestartFeedback: () => void
   onFormSubmit: () => void
-  userId: string
+  clientId: string
 }
 
 export const FeedbackFormStep = ({
   feedbackType,
   handleRestartFeedback,
   onFormSubmit,
-  userId,
+  clientId,
 }: Props) => {
   const [isLoading, setIsLoading] = useState(false)
   const [screenshot, setScreenshot] = useState<string | null>(null)
@@ -29,7 +29,7 @@ export const FeedbackFormStep = ({
       const payload = {
         comment,
         screenshot,
-        userId,
+        clientId,
         type: feedbackType,
       }
       await api.post('feedbacks/create', payload)
