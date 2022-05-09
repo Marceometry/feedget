@@ -3,11 +3,15 @@ import { Popover } from '@headlessui/react'
 import { ChatTeardropDots } from 'phosphor-react'
 import { WidgetForm } from '..'
 
-export const Widget = () => {
+type Props = {
+  userId: string
+}
+
+export const Widget = ({ userId }: Props) => {
   return (
-    <Popover className='absolute bottom-4 right-4 sm:bottom-8 sm:right-8 flex flex-col items-end text-zinc-800 dark:text-zinc-100'>
+    <Popover className='fixed bottom-4 right-4 sm:bottom-8 sm:right-8 flex flex-col items-end text-zinc-800 dark:text-zinc-100'>
       <Popover.Panel>
-        <WidgetForm />
+        <WidgetForm userId={userId} />
       </Popover.Panel>
 
       <Popover.Button className='primary rounded-full px-3 h-12 flex items-center group transition-colors'>

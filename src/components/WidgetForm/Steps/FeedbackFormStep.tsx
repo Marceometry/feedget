@@ -8,12 +8,14 @@ type Props = {
   feedbackType: FeedbackType
   handleRestartFeedback: () => void
   onFormSubmit: () => void
+  userId: string
 }
 
 export const FeedbackFormStep = ({
   feedbackType,
   handleRestartFeedback,
   onFormSubmit,
+  userId,
 }: Props) => {
   const [isLoading, setIsLoading] = useState(false)
   const [screenshot, setScreenshot] = useState<string | null>(null)
@@ -27,9 +29,10 @@ export const FeedbackFormStep = ({
       const payload = {
         comment,
         screenshot,
+        userId,
         type: feedbackType,
       }
-      await api.post('feedback', payload)
+      await api.post('feedbacks/create', payload)
       onFormSubmit()
     } catch (error) {
     } finally {
@@ -63,7 +66,7 @@ export const FeedbackFormStep = ({
           disabled={isLoading}
           onChange={(e) => setComment(e.target.value)}
           placeholder='Conte com detalhes o que está acontecendo'
-          className='w-full min-w-[304px] min-h-[100px] text-sm placeholder-zinc-500 text-zinc-800 border-zinc-300 dark:placeholder-zinc-400 dark:text-zinc-100 dark:border-zinc-600 bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 focus:outline-none resize-none scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700 scrollbar-track-transparent disabled:opacity-50'
+          className='w-full min-w-[304px] min-h-[100px] py-2 px-3 text-sm placeholder-zinc-500 text-zinc-800 border-zinc-300 dark:placeholder-zinc-400 dark:text-zinc-100 dark:border-zinc-600 bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 focus:outline-none resize-none scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700 scrollbar-track-transparent disabled:opacity-50'
         />
 
         <footer className='flex gap-2 mt-1'>
