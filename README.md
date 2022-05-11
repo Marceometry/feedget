@@ -42,6 +42,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💣 Funcionalidades
 
+- Light e Dark mode
+- Personalização das cores e do posicionamento do componente na tela
 - Botão flutuante que abre um modal com formulário
 - Opção de enviar screenshot junto ao feedback
 - Integração com a api em `node` que envia os feedbacks por email para o dono da aplicação
