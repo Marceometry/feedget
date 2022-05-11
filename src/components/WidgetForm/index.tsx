@@ -8,9 +8,10 @@ import {
 
 type Props = {
   clientId: string
+  margin: string
 }
 
-export const WidgetForm = ({ clientId }: Props) => {
+export const WidgetForm = ({ clientId, margin }: Props) => {
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null)
   const [feedbackSent, setFeedbackSent] = useState(false)
 
@@ -20,7 +21,9 @@ export const WidgetForm = ({ clientId }: Props) => {
   }
 
   return (
-    <div className='bg-white dark:bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col items-center shadow-lg w-[calc(100vw-2rem)] sm:w-auto'>
+    <div
+      className={`${margin} bg-white dark:bg-zinc-900 p-4 relative rounded-2xl flex flex-col items-center shadow-lg w-[calc(100vw-2rem)] sm:w-auto`}
+    >
       {feedbackSent ? (
         <FeedbackSuccessStep handleRestartFeedback={handleRestartFeedback} />
       ) : !feedbackType ? (

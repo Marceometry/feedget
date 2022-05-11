@@ -11,11 +11,15 @@ export type FeedbackWidgetProps = {
   primaryColor?: string
   primaryColorHover?: string
   primaryColorText?: string
+  positionStrategy?: 'fixed' | 'absolute' | 'relative'
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 }
 
-export const FeedbackWidget = ({
+export const FeedGet = ({
   clientId,
   theme = 'system',
+  positionStrategy = 'fixed',
+  position = 'bottom-right',
   primaryColor,
   primaryColorHover,
   primaryColorText,
@@ -27,5 +31,18 @@ export const FeedbackWidget = ({
     text: primaryColorText,
   })
 
-  return <Widget clientId={clientId} />
+  const positions = `
+    ${position.startsWith('top') ? 'top-4 sm:top-8' : 'bottom-4 sm:bottom-8'}
+    ${position.endsWith('left') ? 'left-4 sm:left-8' : 'right-4 sm:right-8'}
+  `
+
+  return (
+    <Widget
+      clientId={clientId}
+      positions={positions}
+      positionStrategy={positionStrategy}
+      flexAlign={position.endsWith('left') ? 'items-start' : 'items-end'}
+      flexCol={position.startsWith('top') ? 'flex-col-reverse' : 'flex-col'}
+    />
+  )
 }
