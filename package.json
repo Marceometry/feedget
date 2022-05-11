@@ -11,6 +11,7 @@
     "feedback",
     "widget"
   ],
+  "homepage": "https://feedget.online",
   "repository": {
     "url": "https://github.com/Marceometry/feedget.git",
     "type": "git"
