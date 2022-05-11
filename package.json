@@ -1,6 +1,6 @@
 {
   "name": "feedget",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "FeedGet: Feedback Widget component",
   "main": "dist/index.js",
   "files": [
