@@ -18,6 +18,7 @@ export const FeedbackFormStep = ({
   clientId,
 }: Props) => {
   const [isLoading, setIsLoading] = useState(false)
+  const [hasError, setHasError] = useState(false)
   const [screenshot, setScreenshot] = useState<string | null>(null)
   const [comment, setComment] = useState('')
   const stepInfo = useMemo(() => feedbackTypes[feedbackType], [feedbackType])
@@ -25,6 +26,7 @@ export const FeedbackFormStep = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
+    setHasError(false)
     try {
       const payload = {
         comment,
@@ -35,6 +37,7 @@ export const FeedbackFormStep = ({
       await api.post('feedbacks/create', payload)
       onFormSubmit()
     } catch (error) {
+      setHasError(true)
     } finally {
       setIsLoading(false)
     }
@@ -80,7 +83,7 @@ export const FeedbackFormStep = ({
             disabled={comment.length === 0 || isLoading}
             isLoading={isLoading}
           >
-            Enviar feedback
+            {hasError ? 'Erro. Tentar novamente' : 'Enviar feedback'}
           </Button>
         </footer>
       </form>
