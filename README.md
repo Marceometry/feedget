@@ -11,7 +11,7 @@
 <br>
 
 <p align="center">
-  <img alt="Project Mockup" src="./.github/feedget-mockup.png">
+  <img alt="Project Mockup" src="https://raw.githubusercontent.com/Marceometry/feedget/main/.github/feedget-mockup.png">
 </p>
 
 ## 💻 Projeto
