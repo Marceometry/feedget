@@ -5,15 +5,13 @@
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-executar">Como executar</a>
+  <a href="#-funcionalidades">Funcionalidades</a>
 </p>
 
 <br>
 
 <p align="center">
-  <img alt="Project Mockup" src=".github/mockup1.jpg" width="30%">
-  <img alt="Project Mockup" src=".github/mockup2.jpg" width="30%">
-  <img alt="Project Mockup" src=".github/mockup3.jpg" width="30%">
+  <img alt="Project Mockup" src="./.github/feedget-mockup.png">
 </p>
 
 ## 💻 Projeto
@@ -32,7 +30,7 @@ const FeedbackWidget = () => {
 }
 ```
 
-Essa lib é um botão flutuante que abre um modal de formulário para enviar um feedback, permitindo tirar uma screenshot. Acesse o <a href="https://feedget.online" target="_blank">dashboard</a> e faça login com seu github para conseguir seu `CLIENT_ID`. O `CLIENT_ID` é usado para identificar sua aplicação e direcionar os feedbacks corretamente.
+Essa lib é um botão flutuante que abre um modal de formulário para enviar um feedback, permitindo tirar uma screenshot. Acesse o <a href="https://feedget.online" target="_blank">dashboard</a> e faça login com seu github para conseguir seu `CLIENT_ID`. O `CLIENT_ID` é usado para identificar sua aplicação e direcionar os feedbacks corretamente. Este projeto foi aprimorado a partir da NLW #8, evento da Rocketseat
 
 ## 🧪 Tecnologias
 
