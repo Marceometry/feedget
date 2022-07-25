@@ -68,7 +68,7 @@ export const FeedbackFormStep = ({
         <textarea
           disabled={isLoading}
           onChange={(e) => setComment(e.target.value)}
-          placeholder='Conte com detalhes o que está acontecendo'
+          placeholder='Tell us in detail whats going on'
           className='w-full min-w-[304px] min-h-[100px] py-2 px-3 text-sm placeholder-zinc-500 text-zinc-800 border-zinc-300 dark:placeholder-zinc-400 dark:text-zinc-100 dark:border-zinc-600 bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 focus:outline-none resize-none scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700 scrollbar-track-transparent disabled:opacity-50'
         />
 
@@ -83,7 +83,7 @@ export const FeedbackFormStep = ({
             disabled={comment.length === 0 || isLoading}
             isLoading={isLoading}
           >
-            {hasError ? 'Erro. Tentar novamente' : 'Enviar feedback'}
+            {hasError ? 'Mistake. Try again' : 'Send feedback'}
           </Button>
         </footer>
       </form>

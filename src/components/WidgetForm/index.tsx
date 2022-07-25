@@ -36,17 +36,6 @@ export const WidgetForm = ({ clientId, margin }: Props) => {
           onFormSubmit={() => setFeedbackSent(true)}
         />
       )}
-
-      <footer className='text-xs text-zinc-500 dark:text-zinc-400'>
-        Feito com ♥ por{' '}
-        <a
-          className='underline underline-offset-1 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors'
-          href='https://github.com/Marceometry'
-          target='_blank'
-        >
-          Marcelino Teixeira
-        </a>
-      </footer>
     </div>
   )
 }

@@ -15,14 +15,14 @@ export const FeedbackSuccessStep = ({ handleRestartFeedback }: Props) => {
       <div className='flex flex-col items-center py-9 w-[304px]'>
         <img src={successImage} alt='Ícone de sucesso' />
 
-        <span className='text-xl mt-[6px]'>Agradecemos o feedback!</span>
+        <span className='text-xl mt-[6px]'>We appreciate the feedback!</span>
 
         <Button
           variant='secondary'
           className='mt-5 leading-6'
           onClick={handleRestartFeedback}
         >
-          Quero enviar outro
+          I want to send another
         </Button>
       </div>
     </>

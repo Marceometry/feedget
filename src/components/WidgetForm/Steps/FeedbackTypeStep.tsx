@@ -10,7 +10,7 @@ export const FeedbackTypeStep = ({ handleChangeFeedback }: Props) => {
   return (
     <>
       <header>
-        <span className='text-xl leading-6'>Deixe seu feedback</span>
+        <span className='text-xl leading-6'>Leave your feedback</span>
         <CloseButton />
       </header>
 
